@@ -9,10 +9,15 @@
 
 <table border="1">
 	<tr>
-		<td> Id Eleve</td>
+	    <td> Id Eleve</td>
 		<td> Nom </td>
 		<td> Prénom </td>
 		<td> Classe </td>
+		<td> Matière 1 </td>
+		<td> Matière 2 </td>
+		<td> Matière 3 </td>
+		<td> Matière 4 </td>
+		<td> Matière 5 </td>
 	</tr>
 
 	<?php
@@ -24,6 +29,11 @@
 			echo "<td>" . $unEleve["nom"]      . "</td>";
 			echo "<td>" . $unEleve["prenom"]   . "</td>";
 			echo "<td>" . $unEleve["classe"]   . "</td>";
+			echo "<td>" . $unEleve["matiere1"] . "</td>";
+			echo "<td>" . $unEleve["matiere2"] . "</td>";
+			echo "<td>" . $unEleve["matiere3"] . "</td>";
+			echo "<td>" . $unEleve["matiere4"] . "</td>";
+			echo "<td>" . $unEleve["matiere5"] . "</td>";
 
 			echo "<td>" ;
 

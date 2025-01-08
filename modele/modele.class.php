@@ -17,10 +17,15 @@ class Modele {
 	}
 	/**************** Gestion des clients ************/
 	public function insertEleve($tab){
-		$requete = "insert into eleve values (null, :nom, :prenom, :classe);";
+		$requete = "insert into eleve values (null, :nom, :prenom, :classe, :matiere1, :matiere2, :matiere3, :matiere4, :matiere5, );";
 		$donnees = array(':nom' => $tab['nom'],
 						 ':prenom' => $tab['prenom'],
-						 ':classe' => $tab['classe']
+						 ':classe' => $tab['classe'],
+						 ':matiere1' => $tab['matiere1'],
+						 ':matiere2' => $tab['matiere2'],
+						 ':matiere3' => $tab['matiere3'],
+						 ':matiere4' => $tab['matiere4'],
+						 ':matiere5' => $tab['matiere5']
 						); 
 		//on prépare la requete 
 		$exec = $this->unPdo->prepare ($requete);
@@ -33,7 +38,9 @@ class Modele {
 				$exec = $this->unPdo->prepare ($requete);
 				$exec->execute ();
 		} else{
-				$requete = "select * from eleve where nom like :filtre or prenom like :filtre or classe like :filtre; " ;
+				$requete = "select * from eleve where nom like :filtre or prenom like :filtre or classe like :filtre
+				            or matiere1 like :filtre or matiere2 like :filtre or matiere3 like :filtre
+							or matiere4 like :filtre or matiere5 like :filtre;" ;
 				$donnees = array(":filtre"=>"%".$filtre."%");
 				$exec = $this->unPdo->prepare ($requete);
 				$exec->execute ($donnees);
@@ -50,12 +57,18 @@ class Modele {
 	}
 
 	public function updateEleve ($tab){
-		$requete ="update eleve set nom =:nom, prenom =:prenom, classe =:classe where id_eleve =:id_eleve ;"; 
+		$requete ="update eleve set nom =:nom, prenom =:prenom, classe =:classe, matiere1 =:matiere1
+		           matiere2 =:matiere2, matiere3 =:matiere3, matiere4 =:matiere4, matiere5 =:matiere5 where id_eleve =:id_eleve ;"; 
 		$donnees = array(
 						 ':id_eleve' => $tab['id_eleve'],
 						 ':nom' => $tab['nom'],
 						 ':prenom' => $tab['prenom'],
 						 ':classe' => $tab['classe'],
+						 ':matiere1' => $tab['matiere1'],
+						 ':matiere2' => $tab['matiere2'],
+						 ':matiere3' => $tab['matiere3'],
+						 ':matiere4' => $tab['matiere4'],
+						 ':matiere5' => $tab['matiere5'],
 						); 
 		$exec = $this->unPdo->prepare ($requete);
 		$exec->execute ($donnees);
