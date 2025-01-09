@@ -15,6 +15,6 @@ require_once ("vue/vue_cherche_eleve.php");
 ?>
 
 <br>
-<a href="https://pro.orange.fr"> Nous joindre </a>
+<a href=""> Nous joindre </a>
 <br>
 <br> 

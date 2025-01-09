@@ -37,7 +37,7 @@
 
 			echo "<td>" ;
 
-			echo "<a href='index.php?page=2&action=sup&id_eleve=".$unEleve["id_eleve"]."'> <img src='images/supprimer.png' heigth='30' width='30'> </a>"; 
+			echo "<a href='index.php?page=1&action=sup&id_eleve=".$unEleve["id_eleve"]."'> <img src='images/supprimer.png' heigth='30' width='30'> </a>"; 
 
 			echo "<a href='index.php?page=2&action=edit&id_eleve=".$unEleve["id_eleve"]."'> <img src='images/editer.png' heigth='30' width='30'> </a>"; 
 

@@ -29,17 +29,11 @@
 		//actualiser la page 
 		header("Location: index.php?page=2");
 	}
-
-	//recuperation des clients de la base de données 
-/*	if(isset($_POST['Filtrer'])){
-		$filtre = $_POST['filtre'];
-	}else {
-		$filtre = ""; 
-	}
-	$lesEleves = $unControleur->selectAllEleves($filtre);
-	require_once ("vue/vue_select_eleve.php");
-*/
 ?>
+
+<br>
+<a href=""> Nous joindre </a>
+<br>
 
 
 

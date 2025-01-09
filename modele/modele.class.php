@@ -17,7 +17,7 @@ class Modele {
 	}
 	/**************** Gestion des clients ************/
 	public function insertEleve($tab){
-		$requete = "insert into eleve values (null, :nom, :prenom, :classe, :matiere1, :matiere2, :matiere3, :matiere4, :matiere5, );";
+		$requete = "insert into eleve values (null, :nom, :prenom, :classe, :matiere1, :matiere2, :matiere3, :matiere4, :matiere5);";
 		$donnees = array(':nom' => $tab['nom'],
 						 ':prenom' => $tab['prenom'],
 						 ':classe' => $tab['classe'],
