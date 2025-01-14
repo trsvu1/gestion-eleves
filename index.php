@@ -1,6 +1,6 @@
 <?php
 	require_once("controleur/controleur.class.php"); 
-	//instancier la classe controleur : 
+	
 	$unControleur = new Controleur();
 ?>
 <!DOCTYPE html>
