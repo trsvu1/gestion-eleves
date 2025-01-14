@@ -4,26 +4,26 @@
 		private $unModele ; 
 
 		public function   __construct(){
-			//instancier la classe modele 
+			
 			$this->unModele = new Modele (); 
 		}
-		/****************** Gestion des clients ******/
+		/****************** Gestion des eleves *****************/
 		public function insertEleve($tab){
-			//controler les donnees avant leur insertion dans la BDD 
+			 
 
-			//appel au modele pour inserer les données
+		
 			$this->unModele->insertEleve($tab);
 		}
 
 		public function selectAllEleves ($filtre){
 			$lesEleves = $this->unModele->selectAllEleves($filtre); 
 
-			//controler les données 
+			
 
 			return $lesEleves; 
 		}
 		public function deleteEleve($id_eleve){
-			//on doit vérifier que le client existe dans la table 
+			 
 			$this->unModele->deleteEleve($id_eleve);
 		}
 
