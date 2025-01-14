@@ -7,7 +7,7 @@
 <?php
 if(isset($_POST['Filtrer'])){
 	$filtre = $_POST['filtre'];
-}else {
+} else {
 	$filtre = ""; 
 }
 $lesEleves = $unControleur->selectAllEleves($filtre);
