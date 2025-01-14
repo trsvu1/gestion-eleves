@@ -18,15 +18,15 @@
 
 	require_once ("vue/vue_insert_eleve.php");
 	if (isset($_POST["Valider"])){
-		//insertion des données dans la base 
+		
 		$unControleur->insertEleve($_POST);
 		echo " <br> Insertion réussie.";
 	}
 
 	if (isset($_POST["Modifier"])){
-		//update des données dans la base 
+		
 		$unControleur->updateEleve($_POST);
-		//actualiser la page 
+		
 		header("Location: index.php?page=2");
 	}
 ?>
